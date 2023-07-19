@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,10 +30,15 @@ public class BearImage extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         SharedPreferences prefs = getSharedPreferences("BearImageData", Context.MODE_PRIVATE);
+
         String widthValue = prefs.getString("width", "");
         binding.width.setText(widthValue);
 
+        String heightValue = prefs.getString("height", "");
+        binding.height.setText(heightValue);
+
         binding.setButton.setOnClickListener(clk -> {
+
             EditText widthText = binding.width;
             String width = widthText.getText().toString();
             SharedPreferences.Editor editor1 = prefs.edit();
@@ -46,18 +52,18 @@ public class BearImage extends AppCompatActivity {
             editor2.apply();
 
             TextView messageText = null;
-            AlertDialog.Builder builder = new AlertDialog.Builder(BearImage.this);
-            builder.setMessage("Do you want to sent the size: " + messageText.getText())
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Do you want to generate the image: " + messageText.getText())
                     .setTitle("Select:")
                     .setNegativeButton("No", (dialog, cl) -> {
+                        Toast.makeText(this, "Cancel Image generated!", Toast.LENGTH_SHORT).show();
                     })
                     .setPositiveButton("Yes", (dialog, cl) -> {
-                        Snackbar.make(messageText, "You set the size", Snackbar.LENGTH_LONG)
+                        Snackbar.make(messageText, "The image size is: width = " + width + "height = " + height, Snackbar.LENGTH_LONG)
                                 .setAction("Undo", click -> {
 
-                                    });
-                                }).show();
-
+                                    }).show();
+                                }).create().show();
                             });
                         }
 
