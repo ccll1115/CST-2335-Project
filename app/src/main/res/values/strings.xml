@@ -4,7 +4,14 @@
     <string name="currencyConverter">Currency Converter</string>
     <string name="triviaQuestion">Trivia Question Database</string>
     <string name="bearImage">Bear Image Generator</string>
+
     <string name="flightTitle">Aviation Stack Flight Tracker</string>
     <string name="enterAirportCode">Enter Airport Code (e.g., YOW)</string>
     <string name="searchFlight">Search Flights</string>
+
+    <string name="aviation_stack_flight_tracker">flight_tracker</string>
+    <string name="trivia_question_database">trivia_question</string>
+    <string name="bear_image_generator">bear_image_generator</string>
+    <string name="help">help</string>
+
 </resources>
