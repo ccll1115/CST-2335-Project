@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/icon_flight"
+        android:icon="@drawable/icon_flight"
+        android:title="@string/aviation_stack_flight_tracker"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icon_question"
+        android:icon="@drawable/icon_question"
+        android:title="@string/trivia_question_database"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icon_bear"
+        android:icon="@drawable/icon_bear"
+        android:title="@string/bear_image_generator"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icon_back"
+        android:icon="@drawable/icon_home"
+        android:title="Go Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/icon_help"
+        android:icon="@drawable/icon_help"
+        android:title="@string/help"
+        app:showAsAction="always" />
+</menu>
